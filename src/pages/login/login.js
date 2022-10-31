@@ -9,7 +9,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import WorkWizIcon from '../../assets/nlogo.png';
+import WorkWizWhiteIcon from '../../assets/nlogo_white.png';
 import Background from '../../assets/login_background.png';
 
 const theme = createTheme();
@@ -42,7 +42,11 @@ function SignInSide() {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
-        />
+        >
+          <view style={{ paddingLeft: '50px' }}>
+            <img src={WorkWizWhiteIcon} alt='Logo' width="150px" style={{ paddingTop: '50px' }} />
+          </view>
+        </Grid>
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
@@ -54,9 +58,15 @@ function SignInSide() {
               justifyContent: 'center',
             }}
           >
-            <img src={WorkWizIcon} alt='Logo' width="200px" />
+            <view style={{ width: '100%', paddingTop: '50px' }}>
+              <text
+                style={{ color: '#053950', fontSize: '36px', fontWeight: 'bolder' }}
+              >
+                Login
+              </text>
+            </view>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 5 }}>
-              <view style={{ width: '100%', height: '50px', borderRadius: '90px', borderWidth: '1' }}></view>
+              <view style={{ width: '100%', height: '50px' }}></view>
               <TextField
                 margin="normal"
                 required

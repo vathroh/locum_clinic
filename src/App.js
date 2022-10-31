@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //login
+import LandingLogin from "./pages/login/landing_login";
 import Login from "./pages/login/login";
 import ForgotPassword from "./pages/login/forgot_password";
 import ResetPassword from "./pages/login/reset_password";
@@ -14,7 +15,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<LandingLogin />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/dashboard" element={<Dashboard />} />
